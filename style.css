@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FF836A;
+}
+
+#nav1, #nav2, #nav3{
+    margin-top: 3rem;
+    background-color: #FF836A!important;
+}
+
+video{
+    object-fit: none;
+    object-position: ;
+    margin: 0;
+}
+
+#navs{
+    margin-top: 0%;
+    background-color: #FF836A;
+    padding-top: 20rem;
+}
