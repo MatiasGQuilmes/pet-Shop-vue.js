@@ -17,6 +17,7 @@
 
   </head>
   <body>
+
     <nav class="navbar navbar-expand-lg bg-light p-3" id="nav1">
       <div class="container">
         <div class="w-50">
@@ -27,7 +28,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-          <ul class="navbar-nav text-center">
+          <ul class="navbar-nav text-center gap-5 fw-bolder">
             <li class="nav-item">
               <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
             </li>
@@ -37,20 +38,22 @@
             <li class="nav-item">
               <a class="nav-link text-light" href="#">Pricing</a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                  <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                </svg>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item " href="#">Action</a></li>
-                <li><a class="dropdown-item " href="#">Another action</a></li>
-                <li><a class="dropdown-item " href="#">Something else here</a></li>
-              </ul>
+            <li class="nav-item dropdown"> 
             </li>
           </ul>
         </div>
+       
+        <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item " href="#">Action</a></li>
+          <li><a class="dropdown-item " href="#">Another action</a></li>
+          <li><a class="dropdown-item " href="#">Something else here</a></li>
+        </ul>
+     
       </div>
     </nav>
     <div class="video">
@@ -59,62 +62,13 @@
         
         
       </video>
-
-      <div class="scrolldown" style="--color: skyblue">
-        <div class="chevrons">
-            <div class="chevrondown"></div>
-            <div class="chevrondown"></div>
-        </div>
-    </div>
-     
-
+      <h1>Centro <strong>Pet</strong></h1>
     </div>
     
     
 
-      <main style="height: 50rem;">
-        <div class="col-12 d-flex flex-wrap justify-content-center fondoCrema">
-        <div class="col-10 d-flex justify-content-center mt-5">
-            <form action="" class=" d-flex flex-wrap gap-2 col-10 justify-content-center" @submit.prevent="agradecimiento">
-                <div class="d-flex justify-content-between col-12">
-                    <div class=" d-flex flex-column col-5 justify-content-between ">
-                        <label for="nombre" class="form-label" >Ingresar nombre:</label>
-                        <input type="text" name="nombre" id="nombre" placeholder='"Nombre"'>
-                    </div>
-                    <div class="d-flex flex-column col-5 justify-content-between">
-                        <label for="apellido" class="form-label">Ingresar apellido:</label>
-                        <input type="text" name="apellido" id="apellido" placeholder='"Apellido"'>
-                    </div>
-                </div>
-                <div class="d-flex flex-column col-12">
-                    <label for="mail" class="form-label">Ingresar email:</label>
-                    <input class="col-12" type="text" name="mail" id="mail" placeholder='"enzo.petshop@gmail.com"'>
-                </div>
-                <div class="col-12 d-flex align-items-baseline justify-content-between mt-2">
-                    <div class="col-5 d-flex flex flex-column">
-                        <label for="telefono" class="form-label">Ingresar telefono</label>
-                        <input type="text" name="telefono" id="telefono" placeholder='"117474372472"'>
-                    </div>
-                    <div class="mb-3 col-5 d-flex flex-column">
-                        <label for="tipoDeMascota" class="form-label">Mascota</label>
-                        <select class="form-select-sm" aria-label="form-select-sm" name="tipoDeMascota" id="tipoDeMascota">
-                            <option value="sin definir">-</option>
-                            <option value="perro">Perro</option>
-                            <option value="gato">Gato</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-12">
-                    <textarea name="mensajeContacto" id="mensajeContacto" class="col-12"></textarea>
-                </div>
-                <input type="submit" name="submit" id="submit" class="col-12 btn btn-dark m-3">
-            </form>
-        </div>
-      </div>
-       
-        </main>
       
+      <main> </main>
 
     
     
