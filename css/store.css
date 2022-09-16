@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.w-50{
+    display:none;
+}
+
+.store{
+    background-color:#3E2093; 
+}
+
+.categoria-search{
+    display:flex;
+    justify-content: center !important;
+}
+
+.categoria{
+    display:none
+}
+
+
+.title{
+    color: white;
+    margin-top: 20px; 
+}
+
+.title h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.category-dekstop a{
+    color: white;
+    background-color: #FF836A!important;
+    padding:10px;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold
+}
+
+
+div#cards-articles {
+    gap: 2rem;
+}
+
+.card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 {
+    background: #FF836A;
+    padding: 15px;
+    border-radius: 40px;
+    color: white;
+}
+.container-article{
+    display: flex;
+    justify-content: center;
+}
+
+
+.card-image{
+    border-radius: 40px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.card-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.btn-vermas{
+    background-color:#3E2093; 
+    border: none
+}
+
+/* .btn-farmacia{
+    font-size: 20px;
+    color: #FF836A;
+    background-color: #3E2093;
+    padding: 10px;
+ 
+}
+
+.btn-juguetes{
+    font-size: 20px;
+    color: #FF836A;
+    background-color: #3E2093;
+    padding: 10px;
+    
+}
+
+.form-search{
+    margin-top: 10px;
+} */
+
+
+@media (min-width:1024px){
+    .w-50{
+        display:flex;
+    }
+}

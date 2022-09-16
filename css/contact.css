@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.tarjeta{
+    display: flex;
+    flex-direction: column;
+    background-color:blue;
+    border-radius: 0.5rem;
+    color: white;
+    align-items: center;
+    
+}
+
+.input{
+    background-color:blue
+}
