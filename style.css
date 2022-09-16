@@ -104,5 +104,6 @@ strong{
 .imagen{
     
     border-radius: 100%;
+    width: 35rem;
     background-color: #cb7361;
 }
