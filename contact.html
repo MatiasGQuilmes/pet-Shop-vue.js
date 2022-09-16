@@ -4,11 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/contact.css"> 
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/af39f1a2c3.js" crossorigin="anonymous"></script>
+    <title>Contactenos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="shortcut icon" href="./assets/img/schnauzer.favi.png" type="image/x-icon">
+<link rel="stylesheet" href="./css/contact.css">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" ></script>
 </head>
 <body>
+    <div>
+
+        <header>
+     
+        </header>
+
+
+       
+
+        <main class="col-12 d-flex flex-wrap justify-content-center fondoCrema">
+        <div class="col-10 d-flex justify-content-center mt-5">
+            <form action="" class=" d-flex flex-wrap gap-2 col-10 justify-content-center" @submit.prevent="agradecimiento">
+                <div class="d-flex justify-content-between col-12">
+                    <div class=" d-flex flex-column col-5 justify-content-between ">
+                        <label for="nombre" class="form-label" >Ingresar nombre:</label>
+                        <input type="text" name="nombre" id="nombre" placeholder='"Nombre"'>
+                    </div>
+                    <div class="d-flex flex-column col-5 justify-content-between">
+                        <label for="apellido" class="form-label">Ingresar apellido:</label>
+                        <input type="text" name="apellido" id="apellido" placeholder='"Apellido"'>
+                    </div>
+                </div>
+                <div class="d-flex flex-column col-12">
+                    <label for="mail" class="form-label">Ingresar email:</label>
+                    <input class="col-12" type="text" name="mail" id="mail" placeholder='"enzo.petshop@gmail.com"'>
+                </div>
+                <div class="col-12 d-flex align-items-baseline justify-content-between mt-2">
+                    <div class="col-5 d-flex flex flex-column">
+                        <label for="telefono" class="form-label">Ingresar telefono</label>
+                        <input type="text" name="telefono" id="telefono" placeholder='"117474372472"'>
+                    </div>
+                    <div class="mb-3 col-5 d-flex flex-column">
+                        <label for="tipoDeMascota" class="form-label">Mascota</label>
+                        <select class="form-select-sm" aria-label="form-select-sm" name="tipoDeMascota" id="tipoDeMascota">
+                            <option value="sin definir">-</option>
+                            <option value="perro">Perro</option>
+                            <option value="gato">Gato</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <textarea name="mensajeContacto" id="mensajeContacto" class="col-12"></textarea>
+                </div>
+                <input type="submit" name="submit" id="submit" class="col-12 btn btn-dark m-3">
+            </form>
+        </div>
+
+       
+        </main>
     
+
+</footer>
+
+    </div>
+<!-- JavaScript Bundle with Popper -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@3"></script>
+
 </body>
 </html>
