@@ -3,21 +3,22 @@ body{
     padding: 0;
     box-sizing: border-box;
     background-color: #FF836A;
+    font-family: 'Quicksand', sans-serif;
 }
 
-#nav1, #nav2, #nav3{
-    margin-top: 3rem;
+#nav1{
+  
     background-color: #FF836A!important;
 }
 
 video{
     object-fit: none;
-    object-position: ;
+    object-position: 0 100%;
     margin: 0;
 }
 
 #navs{
     margin-top: 0%;
     background-color: #FF836A;
-    padding-top: 20rem;
+  
 }
