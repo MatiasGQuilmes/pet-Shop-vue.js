@@ -10,7 +10,9 @@ body{
   
     background-color: #FF836A!important;
 }
-
+/* video:hover {
+    display: none;
+} */
 video{
     object-fit: contain;
     object-position: 0 100%;
