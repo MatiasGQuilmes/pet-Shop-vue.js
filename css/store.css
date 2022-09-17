@@ -13,18 +13,34 @@ a{
     display:none;
 }
 
-.store{
-    background-color:#f4f4f4; 
+main.store {
+  background: #f4f4f4 !important;
 }
 
-.categoria-search{
-    display:flex;
-    justify-content: center !important;
+/* ----------- */
+/* nav */
+
+#nav1{
+  
+  background-color: #FF836A!important;
 }
+
+
+
+
+/* 
+ display: none .title{ color: white; margin-top: 20px; } .title h2{ font-size: 30px; font-weight: bold; color: #3E2093; } .category-dekstop a{ color: white; background-color: #3E2093!important; padding:10px; width: 30%; text-align: center; border-radius: 20px; font-weight: bold } div#cards-articles { gap: 2rem; } .card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 { <<<<<<< HEAD background: #3E2093; ======= background: #944e40; >>>>>>> 57ac8292aa35b4786f8990db52ce1d9353bc9961 padding: 15px; border-radius: 40px; color: white; } .container-article{ display: flex; justify-content: center; } .card-image{ border-radius: 40px; } .card-body{ display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; } .card-price{ display: flex; justify-content: space-between; align-items: center; width: 90%; } .btn-vermas{ background-color:#FF836A; border: none } /* .btn-farmacia{ font-size: 20px; color: #FF836A; background-color: #3E2093; padding: 10px; } .btn-juguetes{ font-size: 20px; color: #FF836A; background-color: #3E2093; padding: 10px; } .form-search{ margin-top: 10px; } */ input.form-control.me-2[type="search"]{ color: #3E2093; border-color: #FF836A; } @media (min-width:1024px){ .w-50{ display:flex; width: 37.5% !important; } .me-2 { text-align: center; } } /* --------------------------- */ /* From uiverse.io by @fanishah */ .contenedor { position: absolute; width: 100px; height: 100px; top: 0; bottom: 0; left: 0; right: 0; margin: auto; } .item { width: 50px; height: 50px; position: absolute; } .item-1 { background-color: #FF836A; top: 0; left: 0; z-index: 1; animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-2 { background-color: rgb(121, 68, 228); top: 0; right: 0; animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-3 { background-color: #3E2093; bottom: 0; right: 0; z-index: 1; animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-4 { background-color: rgb(250, 194, 76); bottom: 0; left: 0; animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } @keyframes item-1_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(0, 50px) } 50% { transform: translate(50px, 50px) } 75% { transform: translate(50px, 0) } } @keyframes item-2_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(-50px, 0) } 50% { transform: translate(-50px, 50px) } 75% { transform: translate(0, 50px) } } @keyframes item-3_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(0, -50px) } 50% { transform: translate(-50px, -50px) } 75% { transform: translate(-50px, 0) } } @keyframes item-4_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(50px, 0) } 50% { transform: translate(50px, -50px) } 75% { transform: translate(0, -50px) } };
+   */
+
+
 
 .categoria{
-    display:none
+  display:none !important
 }
+
+
+/* ------------- */
+
 
 
 .title{
@@ -54,7 +70,8 @@ div#cards-articles {
 }
 
 .card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 {
-    background: #3E2093;
+ background: #3E2093;
+ 
     padding: 15px;
     border-radius: 40px;
     color: white;
@@ -88,7 +105,6 @@ div#cards-articles {
     background-color:#FF836A; 
     border: none
 }
-
 
 
 /* .btn-farmacia{

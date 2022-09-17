@@ -10,12 +10,16 @@
 }
 
 .container-detail {
-  /*   background-color: #f4f4f4; */
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.categoria{
+    display:none !
+}
+
 
 img.img-detail-img {
     width: 100%;
