@@ -98,3 +98,8 @@ ul{
     border-radius: 100%;
     background-color: #cb7361;
 }
+
+.h2{
+    color: hsl(256, 64%, 35%)!important;
+    font-weight: bolder;
+}
