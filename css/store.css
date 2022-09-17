@@ -14,7 +14,7 @@ a{
 }
 
 .store{
-    background-color:#3E2093; 
+    background-color:#F88A74; 
 }
 
 .categoria-search{
@@ -53,7 +53,7 @@ div#cards-articles {
 }
 
 .card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 {
-    background: #FF836A;
+    background: #944e40;
     padding: 15px;
     border-radius: 40px;
     color: white;
