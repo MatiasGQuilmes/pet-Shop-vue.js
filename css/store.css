@@ -14,7 +14,7 @@ a{
 }
 
 .store{
-    background-color:#3E2093; 
+    background-color:#f4f4f4; 
 }
 
 .categoria-search{
@@ -35,11 +35,12 @@ a{
 .title h2{
     font-size: 30px;
     font-weight: bold;
+    color: #3E2093;
 }
 
 .category-dekstop a{
     color: white;
-    background-color: #FF836A!important;
+    background-color: #3E2093!important;
     padding:10px;
     width: 30%;
     text-align: center;
@@ -53,7 +54,7 @@ div#cards-articles {
 }
 
 .card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 {
-    background: #FF836A;
+    background: #3E2093;
     padding: 15px;
     border-radius: 40px;
     color: white;
@@ -84,7 +85,7 @@ div#cards-articles {
 }
 
 .btn-vermas{
-    background-color:#3E2093; 
+    background-color:#FF836A; 
     border: none
 }
 
@@ -109,10 +110,150 @@ div#cards-articles {
 .form-search{
     margin-top: 10px;
 } */
+input.form-control.me-2[type="search"]{
+    color: #3E2093;
+    border-color: #FF836A;
+}
 
 
 @media (min-width:1024px){
     .w-50{
         display:flex;
+        width: 37.5% !important;
     }
+
+    .me-2 {
+        text-align: center;
+    }
+
+    
+
 }
+
+
+
+
+
+/* --------------------------- */
+
+/* From uiverse.io by @fanishah */
+.contenedor {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  
+  .item {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+  }
+  
+  .item-1 {
+    background-color: #FF836A;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-2 {
+    background-color: rgb(121, 68, 228);
+    top: 0;
+    right: 0;
+    animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-3 {
+    background-color: #3E2093;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  .item-4 {
+    background-color: rgb(250, 194, 76);
+    bottom: 0;
+    left: 0;
+    animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+  }
+  
+  @keyframes item-1_move {
+    0%, 100% {
+      transform: translate(0, 0)
+    }
+  
+    25% {
+      transform: translate(0, 50px)
+    }
+  
+    50% {
+      transform: translate(50px, 50px)
+    }
+  
+    75% {
+      transform: translate(50px, 0)
+    }
+  }
+  
+  @keyframes item-2_move {
+    0%, 100% {
+      transform: translate(0, 0)
+    }
+  
+    25% {
+      transform: translate(-50px, 0)
+    }
+  
+    50% {
+      transform: translate(-50px, 50px)
+    }
+  
+    75% {
+      transform: translate(0, 50px)
+    }
+  }
+  
+  @keyframes item-3_move {
+    0%, 100% {
+      transform: translate(0, 0)
+    }
+  
+    25% {
+      transform: translate(0, -50px)
+    }
+  
+    50% {
+      transform: translate(-50px, -50px)
+    }
+  
+    75% {
+      transform: translate(-50px, 0)
+    }
+  }
+  
+  @keyframes item-4_move {
+    0%, 100% {
+      transform: translate(0, 0)
+    }
+  
+    25% {
+      transform: translate(50px, 0)
+    }
+  
+    50% {
+      transform: translate(50px, -50px)
+    }
+  
+    75% {
+      transform: translate(0, -50px)
+    }
+  }
+
+

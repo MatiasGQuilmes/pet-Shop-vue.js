@@ -1,14 +1,16 @@
-const { createApp } = Vue
-
-createApp({
+const app = Vue.createApp({
   data() {
     return {
         products: [],
+        backupProducts: [],
         juguetes:[],
         farmacia:[],
-        message: "hola",
-        api:"https://apipetshop.herokuapp.com/api/articulos"
+        categorias: [],
+        api:"https://apipetshop.herokuapp.com/api/articulos",
         
+        id: new URLSearchParams(location.search).get("id"),
+        textSearch: "", 
+        detailProduct: []
 
     }
   },
@@ -20,28 +22,50 @@ createApp({
         fetch(url)
         .then(response => response.json()
             .then(data => {
-                this.products = data.response
-              console.log(products)
+              this.products = data.response
+              this.backupProducts = this.products
 
+              this.detailProduct = this.products.find( e => e._id == this.id)
 
+              
+              this.juguetesFiltered()
+             
+             
+             
 
             })
         ).catch(err => console.log(err.message))
+    },juguetesFiltered(){
+
+      let categoryFiltered = [] 
+      
+      this.categorias.filter(e => e.tipo)
+      console.log(categoryFiltered);
+      
+      categoryFiltered.foreach(i =>{
+        this.products.forEach(e => {
+          if(e.tipo == i){
+            this.juguetes.push(e)
+          }
+        })
+
+      
+        this.products.forEach(e => {
+          if(e.tipo == i){
+            this.farmacia.push(e)
+          }
+        })
+      })
+      
+        
     }
-
-
-  },
+  
+    },
   computed:{
-  /*   filtroSearch(){
-        let filtroSearch = this.products.filter(product => product.name.toLowerCase().includes(this.textSearch.toLowerCase()))    
-        if(this.filterCategory.length){
-            this.products = checkDesk.filter(e => this.filterCategory.includes(e.category))
-        }else{
-            this.products = primerFiltro
-           
-    } */
-
-
+      filtroSearch(){
+        let search = this.backupProducts.filter(product => product.nombre.toLowerCase().includes(this.textSearch.toLowerCase()))
+        this.products = search
+      }
     
   }
 

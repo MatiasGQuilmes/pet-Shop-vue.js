@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>detail</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/detail.css">
+    
+      </head>
+<body>
+    <div id="app">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-light p-3" id="nav1">
+                <div class="container-fluid nab">
+                <a href="index.html" class="w-50">
+                <img src="https://centropet.com/wp-content/uploads/2020/08/logo2020.png" width="100rem" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                    <ul class="navbar-nav text-center fw-bolder gap-5">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="/store.html">Store</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown"> 
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+              
+        </header>
+        <main class="main-detail">
+
+            <div class="container-detail">
+                <div class="img-detail">
+                    <img class="img-detail-img" :src="detailProduct.imagen" :alt="detailProduct.nombre">
+                </div>
+                <div class="info-detail">
+                    <div  class="title">
+                        <h2>{{detailProduct.nombre}}</h2>
+                    </div>
+                    <div class="price">
+                        <p>$ {{detailProduct.precio}}</p>
+                    </div>
+                    <div class="descripcion">
+                        <p>{{detailProduct.descripcion}}</p>
+                    </div>
+                    <div class="cart">
+                        <div class="mas-menos">
+                            <button class="menos">
+                                -
+                            </button>
+                            1
+                            <button class="mas">
+                                +
+                            </button>
+                        </div>
+                        <div class="addToCart-div">
+                            <a class="addToCart" href="">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./javascript/vue.js"></script>
+</body>
+</html>

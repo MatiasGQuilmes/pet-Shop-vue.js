@@ -47,9 +47,8 @@ ul{
 
 
 
-main{
-    height: 100vh;
-    
+main {   
+    min-height: 86vh;
 }
 strong{
     color: #3E2093;
