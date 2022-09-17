@@ -5,6 +5,8 @@
 
 
 .tarjeta{
+
+    background-color: #FF836A!important;
     display: flex;
     flex-direction: column;
     background-color:blue;

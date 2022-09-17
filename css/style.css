@@ -24,7 +24,6 @@ video{
 #navs{
     margin-top: 0%;
     background-color: #FF836A;
-  
 }
 
 .video{
@@ -38,7 +37,7 @@ video{
     width: 100%;
 }
 main{
-    min-height: 87vh;
+    min-height: 90vh;
 }
 
 
@@ -199,9 +198,10 @@ iframe{
 
 footer{
     margin-top: 4rem;
-    height: 40vh;
+    height: 15vh;
     width: 100%;
-    background-color: #3E2093;
+    background-color:#b3594a;
+    border-top: black 3px solid;
 }
 
 
