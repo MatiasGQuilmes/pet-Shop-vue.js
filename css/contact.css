@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
@@ -7,6 +7,25 @@
 .tarjeta{
 
     background-color: #FF836A!important;
+    display: flex;
+    flex-direction: column;
+    background-color:blue;
+    border-radius: 0.5rem;
+    color: white;
+    align-items: center;
+    
+}
+
+.input{
+    background-color:blue
+} */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.tarjeta{
     display: flex;
     flex-direction: column;
     background-color:blue;
