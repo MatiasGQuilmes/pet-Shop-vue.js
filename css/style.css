@@ -9,12 +9,21 @@ html{
     scroll-behavior: smooth;
 }
 
+
 #nav1{
-  
-    background-color: #FF836A!important;
+    position: fixed;
+    background-color: #3E2093!important;
+    z-index: 1515125125;
+    width: 100%;
+   
+}
+a{
+    color: #FF836A!important;
+    font-size: 1.4rem!important;
 }
 
 video{
+    margin-top: 5rem!important;
     object-fit: contain;
     object-position: 0 100%;
     margin: 0;
@@ -42,11 +51,9 @@ main{
 }
 
 
-
 ul{
     letter-spacing: 2px;
 }
-
 
 .title-desktop{
     display: none;
@@ -72,7 +79,10 @@ strong{
     left: 2%;
     font-weight: bolder;
 }
-
+#carousel{
+    min-height: 50vh;
+    width: 100%;
+}
 #circulo img{
     
     width: 100%;
@@ -121,8 +131,7 @@ p{
     margin: 0;
     width: 100%;
     min-height: 80vh;
-    background: rgb(247,99,1);
-background: linear-gradient(90deg, #FF836A 5%, rgba(247,99,1,1) 49.8%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 64%, #FF836A 97%);
+    background: #313197;
 }
 
 *{
@@ -172,36 +181,38 @@ h6, h3{
     letter-spacing: 2px;
 }
 
-h2:hover{
-    
-    transform: scale(1.03);
-    transition: .7s;
-    
-    
-    
-}
-
 .card:hover{
     transform: scale(1.2);
     transition: .7s;
 }
 
+
+
 #map{
+    background: #313197;
     width: 100%;
-    height: 50vh;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    padding-top: 1rem;
+}
+.mapa{
+    width: 95%;
+    height: 90%;
+    border-radius: 2rem;
 }
 iframe{
-    width: 50vw;
+    width: 95%;
+    border-radius:2rem;
 }
  a{
     text-decoration: none;
 }
 
 footer{
-    margin-top: 4rem;
+    
     height: 40vh;
     width: 100%;
-    background-color: #3E2093;
+    background-color: #FF836A;
 }
 
 
@@ -305,3 +316,6 @@ footer{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+
+  
