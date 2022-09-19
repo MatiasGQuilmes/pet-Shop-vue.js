@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/store.css"> 
     <title>store</title>
 </head>
@@ -23,13 +28,13 @@
           <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul class="navbar-nav text-center gap-5 fw-bolder">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/store.html">Store</a>
+                <a class="nav-link" href="/store.html">Tienda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
+                <a class="nav-link" href="/contact.html">Contacto</a>
               </li>
               <li class="nav-item dropdown"> 
               </li>
@@ -42,9 +47,9 @@
             </svg>
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item " href="#">Home</a></li>
-            <li><a class="dropdown-item " href="#">Store</a></li>
-            <li><a class="dropdown-item " href="#">Contact</a></li>
+            <li><a class="dropdown-item " href="#">Inicio</a></li>
+            <li><a class="dropdown-item " href="#">Tienda</a></li>
+            <li><a class="dropdown-item " href="#">Contacto</a></li>
           </ul>
        
         </div>
@@ -55,47 +60,51 @@
       <main class="store">
 
         <nav class="navbar bg-light">
-            <div class="container-fluid categoria-search d-flex justify-content-center"> 
+            <div class="container-fluid categoria-search d-flex justify-content-center "> 
+             
 
-
-              <form class="form" >
+              <form class="form"  role="search">
                 <button>
                     <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
                         <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </button>
-                {{filtroSearch}}     
-                <input v-model="textSearch"  class="input"  placeholder="Type your text" required="" type="text">
+                {{filtroSearch}}   
+             
+                <input v-model="textSearch"  class="input"  placeholder="Buscador" required="" type="search">
                 <button class="reset" type="reset">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
+                    </svg> -->
                 </button>
              </form>
                <!--  <form class="d-flex form-search" role="search">  
                   {{filtroSearch}}       
                     <input v-model="textSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" > 
                       
-                </form>  -->
+                    </form>  -->
 
             </div>
            
           </nav>
+          
+
+
           <div class="title">
-             <h2>Store</h2>
+             <h2>Tienda</h2>
           </div>
 
           <div class="category-dekstop d-flex justify-content-around mt-4">
             <div class="categoria">
               <input type="checkbox" class="btn-check" v-model="checkbox" id="pharmacy" value="Medicamento" autocomplete="off">
-              <label class="btn "  for="pharmacy">Pharmacy</label><br>
+              <label class="btn "  for="pharmacy">Farmacia</label><br>
             </div>
             <div class="all">
-              <a href="./store.html">All</a>
+              <a href="./store.html">Todo</a>
             </div>
             <div class="categoria">
               <input type="checkbox" class="btn-check" v-model="checkbox" id="Juguete" value="Juguete" autocomplete="off">
-              <label class="btn" for="Juguete" id="Juguete" >Toys</label><br>
+              <label class="btn" for="Juguete" id="Juguete" >Juguetes</label><br>
             </div>
           </div>
        
@@ -134,10 +143,50 @@
 
       <footer>
 
-       <div>
-        <h3>footer</h3>
-       </div>
+          <div class="footer-top">
+            <div class="footer-top-left">
+                <h4>Subscribete para nuevas noticias</h4>
+            </div>
+            <div class="footer-top-right">
+                <label for=""><input type="mail">Subscribe</label>
+            </div>
+          </div>
 
+
+          <div class="footer-medium">
+              <div class="footer-about">
+                <div class="footer-about-title">
+                    <h5>Sobre Nosotros</h5>
+                </div>
+                <div class="footer-about-description">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est debitis nemo, perspiciatis ea ipsa atque quasi commodi alias nobis sequi?</p>
+                </div>
+              </div>
+
+              <div class="footer-contact">
+                <div class="footer-contact-title">
+                    <h5>Informacion de Contacto</h5>
+                </div>
+                <div>
+                    <a href="https://www.google.com/maps/place/R%C3%ADo+de+Janeiro+300,+C1405CCB+CABA/@-34.6117922,-58.4326038,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca429815227f:0x5d302e497c2cda87!8m2!3d-34.6117966!4d-58.4304098">Río de Janeiro 300 - CABA </a>
+                    <a href="mailto:centroPet@gmail.com">centroPet@gmail.com</a>
+                    <a href="tel:+5491132124231">+54 9 11-3212-4231</a>
+                </div>
+              </div>
+          </div>
+
+          <div class="footer-redes-container">
+              <div class="footer-redes">
+                  <a href="./assets/416-4169142_facebook-logo-facebook-white-icon-png-2018.png"></a>
+                  <a href=""></a>
+                  <a href=""></a>
+              </div>
+          </div>
+
+
+          <div class="copyright">
+              <p>Copyright 2022. Todos los derechos reservados</p>
+          </div>
       </footer>
     </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>

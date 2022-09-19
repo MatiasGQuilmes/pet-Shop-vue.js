@@ -3,6 +3,7 @@
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
 a{
@@ -12,7 +13,14 @@ a{
 .w-50{
     display:none;
 }
-
+.navbar-toggler:hover {
+  text-decoration: none;
+  border: none;
+  background: #f4f4f4;
+}
+.p-5 {
+  padding: 1.5rem!important;
+}
 main.store {
   background: #f4f4f4 !important;
   min-height: 86vh;
@@ -21,14 +29,12 @@ main.store {
 /* ----------- */
 /* nav */
 
+    
 #nav1{
-  position: fixed;
   background-color: #3E2093!important;
-  z-index: 1515125125;
   width: 100%;
- 
-}
 
+}
 .nav-link{
   color: white;
  /*  color: #FF836A!important; */
@@ -42,10 +48,10 @@ main.store {
 
 /* nav mob */
 
-.text-center {
+/* .text-center {
   margin-top: 1rem;
   border-bottom: 1px solid orange;
-}
+} */
 /* ------------- */
 
 
@@ -68,7 +74,6 @@ main.store {
 .category-dekstop .all a{
   color: white;
   background-color: #3E2093!important;
-  padding:2px;
   width: 32%;
   text-align: center;
   border-radius: 20px;
@@ -175,10 +180,9 @@ input.form-control.me-2[type="search"]{
 /* From uiverse.io by @satyamchaudharydev */
 /* removing default style of button */
 
-form{
-  margin-top: 5rem;
+form {
+  margin: 5px;
 }
-
 .form button {
   border: none;
   background: none;
@@ -269,7 +273,11 @@ footer{
 
 
 
+
+
 /* ----------------footer------------- */
+
+
 
 
 
@@ -292,6 +300,18 @@ footer{
     .carrito{
       padding-top:0
     }
+
+    
+    #nav1{
+      position: fixed;
+      background-color: #3E2093!important;
+      z-index: 1515125125;
+      width: 100%;
+    
+    }
+    .container-fluid.categoria-search.d-flex.justify-content-center {
+      margin-top: 5.3rem;
+  }
 
 }
 
