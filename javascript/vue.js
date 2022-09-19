@@ -3,8 +3,6 @@ const app = Vue.createApp({
     return {
         products: [],
         backupProducts: [],
-        juguetes:[],
-        farmacia:[],
         checkbox:[],
         api:"https://apipetshop.herokuapp.com/api/articulos",
 
@@ -47,13 +45,12 @@ const app = Vue.createApp({
   },
   computed:{
       filtroSearch(){
-	let search = this.backupProducts.filter(product => product.nombre.toLowerCase().includes(this.textSearch.toLowerCase()))
-	      console.log();
+        let search = this.backupProducts.filter(product => product.nombre.toLowerCase().includes(this.textSearch.toLowerCase()))
+              console.log();
 	      if (this.checkbox.length > 0) {
-		let checkbox = this.backupProducts.filter(product => product.tipo.includes(this.checkbox.at(-1)))
-			this.products= search.filter(products => {return checkbox.includes(products)})
-		 
-	 }
+          let checkbox = this.backupProducts.filter(product => product.tipo.includes(this.checkbox.at(-1)))
+          this.products= search.filter(products => {return checkbox.includes(products)})		 
+	      }
 	      else{
 		      this.products = this.backupProducts
 	      }

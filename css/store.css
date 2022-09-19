@@ -15,52 +15,83 @@ a{
 
 main.store {
   background: #f4f4f4 !important;
+  min-height: 86vh;
 }
 
 /* ----------- */
 /* nav */
 
 #nav1{
-  
-  background-color: #FF836A!important;
+  position: fixed;
+  background-color: #3E2093!important;
+  z-index: 1515125125;
+  width: 100%;
+ 
+}
+
+.nav-link{
+  color: white;
+ /*  color: #FF836A!important; */
+  font-size: 1.4rem!important;
+}
+
+.carrito:hover{
+  color: #FF836A;
 }
 
 
+/* nav mob */
 
-
-/* 
- display: none .title{ color: white; margin-top: 20px; } .title h2{ font-size: 30px; font-weight: bold; color: #3E2093; } .category-dekstop a{ color: white; background-color: #3E2093!important; padding:10px; width: 30%; text-align: center; border-radius: 20px; font-weight: bold } div#cards-articles { gap: 2rem; } .card.container-fluid.col-sm-10.col-md-10.col-lg-6.col-xl-4 { <<<<<<< HEAD background: #3E2093; ======= background: #944e40; >>>>>>> 57ac8292aa35b4786f8990db52ce1d9353bc9961 padding: 15px; border-radius: 40px; color: white; } .container-article{ display: flex; justify-content: center; } .card-image{ border-radius: 40px; } .card-body{ display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; } .card-price{ display: flex; justify-content: space-between; align-items: center; width: 90%; } .btn-vermas{ background-color:#FF836A; border: none } /* .btn-farmacia{ font-size: 20px; color: #FF836A; background-color: #3E2093; padding: 10px; } .btn-juguetes{ font-size: 20px; color: #FF836A; background-color: #3E2093; padding: 10px; } .form-search{ margin-top: 10px; } */ input.form-control.me-2[type="search"]{ color: #3E2093; border-color: #FF836A; } @media (min-width:1024px){ .w-50{ display:flex; width: 37.5% !important; } .me-2 { text-align: center; } } /* --------------------------- */ /* From uiverse.io by @fanishah */ .contenedor { position: absolute; width: 100px; height: 100px; top: 0; bottom: 0; left: 0; right: 0; margin: auto; } .item { width: 50px; height: 50px; position: absolute; } .item-1 { background-color: #FF836A; top: 0; left: 0; z-index: 1; animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-2 { background-color: rgb(121, 68, 228); top: 0; right: 0; animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-3 { background-color: #3E2093; bottom: 0; right: 0; z-index: 1; animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } .item-4 { background-color: rgb(250, 194, 76); bottom: 0; left: 0; animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite; } @keyframes item-1_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(0, 50px) } 50% { transform: translate(50px, 50px) } 75% { transform: translate(50px, 0) } } @keyframes item-2_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(-50px, 0) } 50% { transform: translate(-50px, 50px) } 75% { transform: translate(0, 50px) } } @keyframes item-3_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(0, -50px) } 50% { transform: translate(-50px, -50px) } 75% { transform: translate(-50px, 0) } } @keyframes item-4_move { 0%, 100% { transform: translate(0, 0) } 25% { transform: translate(50px, 0) } 50% { transform: translate(50px, -50px) } 75% { transform: translate(0, -50px) } };
-   */
-
-
-
-
-
+.text-center {
+  margin-top: 1rem;
+  border-bottom: 1px solid orange;
+}
 /* ------------- */
 
 
 
-.title{
-    color: white;
-    margin-top: 20px; 
+.title {
+  text-align: center;
+/*   margin: 20px; */
 }
+
+
 
 .title h2{
     font-size: 30px;
     font-weight: bold;
     color: #3E2093;
+    text-align: center;
+    margin-top: 40px;
 }
 
-.category-dekstop a{
+.category-dekstop .all a{
+  color: white;
+  background-color: #3E2093!important;
+  padding:2px;
+  width: 32%;
+  text-align: center;
+  border-radius: 20px;
+  font-weight: bold;
+  
+}
+.category-dekstop div{
     color: white;
     background-color: #3E2093!important;
-    padding:10px;
-    width: 30%;
+    padding:2px;
+    width: 32%;
     text-align: center;
     border-radius: 20px;
-    font-weight: bold
+    font-weight: bold;
+    display: flex;
+   align-items: center;
+    justify-content: center;
 }
 
+label.btn {
+  color: white;
+  font-weight: bold;
+}
 
 div#cards-articles {
     gap: 2rem;
@@ -108,6 +139,10 @@ div#cards-articles {
 }
 
 
+
+
+
+
 /* .btn-farmacia{
     font-size: 20px;
     color: #FF836A;
@@ -133,6 +168,112 @@ input.form-control.me-2[type="search"]{
 }
 
 
+/* ------------------------- */
+/*-------------------- search --------------------- */
+
+/* From uiverse.io by @satyamchaudharydev */
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+form{
+  margin-top: 5rem;
+}
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+ 
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #2f2ee9;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+/* -------------------- */
+
+footer{
+  background-color: #3E2093;
+}
+
+
+
+
+/* ----------------footer------------- */
+
+
+
+
 @media (min-width:1024px){
     .w-50{
         display:flex;
@@ -143,7 +284,14 @@ input.form-control.me-2[type="search"]{
         text-align: center;
     }
 
-    
+    .text-center {
+      margin-top: 0;
+      border-bottom: unset
+    }
+
+    .carrito{
+      padding-top:0
+    }
 
 }
 

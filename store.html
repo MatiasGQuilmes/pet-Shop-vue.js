@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="./css/store.css"> 
     <title>store</title>
 </head>
@@ -22,20 +23,20 @@
           <div class="collapse navbar-collapse " id="navbarNavDropdown">
             <ul class="navbar-nav text-center gap-5 fw-bolder">
               <li class="nav-item">
-                <a class="nav-link active text-light" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="/store.html">Store</a>
+                <a class="nav-link" href="/store.html">Store</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="/contact.html">Contact</a>
+                <a class="nav-link" href="/contact.html">Contact</a>
               </li>
               <li class="nav-item dropdown"> 
               </li>
             </ul>
           </div>
          
-          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link carrito dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
               <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
             </svg>
@@ -57,27 +58,45 @@
             <div class="container-fluid categoria-search d-flex justify-content-center"> 
 
 
-
-                <form class="d-flex form-search" role="search">  
+              <form class="form" >
+                <button>
+                    <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+                        <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+                {{filtroSearch}}     
+                <input v-model="textSearch"  class="input"  placeholder="Type your text" required="" type="text">
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+             </form>
+               <!--  <form class="d-flex form-search" role="search">  
                   {{filtroSearch}}       
                     <input v-model="textSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" > 
                       
-                </form>
-              
+                </form>  -->
 
             </div>
            
           </nav>
-          <div class="title text-center">
+          <div class="title">
              <h2>Store</h2>
           </div>
 
           <div class="category-dekstop d-flex justify-content-around mt-4">
-		  	<input type="checkbox" class="btn-check" v-model="checkbox" id="pharmacy" value="Medicamento" autocomplete="off">
-		  	<label class="btn "  for="pharmacy">Pharmacy</label><br>
-
-		  	<input type="checkbox" class="btn-check" v-model="checkbox" id="Juguete" value="Juguete" autocomplete="off">
-		  	<label class="btn" for="Juguete" id="Juguete" >Toys</label><br>
+            <div class="categoria">
+              <input type="checkbox" class="btn-check" v-model="checkbox" id="pharmacy" value="Medicamento" autocomplete="off">
+              <label class="btn "  for="pharmacy">Pharmacy</label><br>
+            </div>
+            <div class="all">
+              <a href="./store.html">All</a>
+            </div>
+            <div class="categoria">
+              <input type="checkbox" class="btn-check" v-model="checkbox" id="Juguete" value="Juguete" autocomplete="off">
+              <label class="btn" for="Juguete" id="Juguete" >Toys</label><br>
+            </div>
           </div>
        
           <div class="products-container" >
@@ -115,7 +134,9 @@
 
       <footer>
 
-
+       <div>
+        <h3>footer</h3>
+       </div>
 
       </footer>
     </div>
