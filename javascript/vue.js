@@ -5,12 +5,14 @@ const app = Vue.createApp({
         backupProducts: [],
         juguetes:[],
         farmacia:[],
-        categorias: [],
+        checkbox:[],
         api:"https://apipetshop.herokuapp.com/api/articulos",
-        
+
         id: new URLSearchParams(location.search).get("id"),
         textSearch: "", 
-        detailProduct: []
+        detailProduct: [],
+	test:{},
+	category:[]
 
     }
   },
@@ -27,46 +29,34 @@ const app = Vue.createApp({
 
               this.detailProduct = this.products.find( e => e._id == this.id)
 
-              
-              this.juguetesFiltered()
-             
-             
-             
+
+
+
+
 
             })
         ).catch(err => console.log(err.message))
-    },juguetesFiltered(){
 
-      let categoryFiltered = [] 
-      
-      this.categorias.filter(e => e.tipo)
-      console.log(categoryFiltered);
-      
-      categoryFiltered.foreach(i =>{
-        this.products.forEach(e => {
-          if(e.tipo == i){
-            this.juguetes.push(e)
-          }
-        })
 
-      
-        this.products.forEach(e => {
-          if(e.tipo == i){
-            this.farmacia.push(e)
-          }
-        })
-      })
-      
-        
-    }
-  
+
+
     },
+     agradecimiento(){
+        Swal.fire('SEND!', '', 'success')
+      },
+
+
+  },
   computed:{
-      filtroSearch(){
-        let search = this.backupProducts.filter(product => product.nombre.toLowerCase().includes(this.textSearch.toLowerCase()))
-        this.products = search
+    filtroSearch(){
+      let search = this.backupProducts.filter(product => product.nombre.toLowerCase().includes(this.textSearch.toLowerCase()))
+      this.products = search
+      if (this.checkbox.length > 0) {
+          let checkbox = this.backupProducts.filter(product => product.tipo == this.checkbox)
+          this.products= search.filter(products => {return checkbox.includes(products)})
       }
-    
+    },
+
   }
 
 }).mount('#app')

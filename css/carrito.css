@@ -1,0 +1,146 @@
+/*--carrito de compras--*/
+.compraFinal {
+    width: 300px;
+    max-height: 350px;
+    margin: 80px auto;
+    background: #ffffff;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+  .shopping-cartCanvas{
+    width: 750px;
+    
+    background: #ffffff;
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .shopping-cart {
+    width: 750px;
+    margin: 80px auto;
+    margin-right: -2rem;
+    background: #ffffff;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    height: 60px;
+    border-bottom: 1px solid #e1e8ee;
+    padding: 20px 30px;
+    color: #5e6977;
+    font-weight: 400;
+    text-align: center;
+  }
+  .titleCanvas{
+    
+    border-bottom: 1px solid #e1e8ee;
+    
+    color: #5e6977;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  
+  .item {
+    padding: 20px 30px;
+    height: 120px;
+    display: flex;
+  }
+  .itemCanvas {
+    padding: 20px 0 0 0;
+    
+    height: 120px;
+    display: flex;
+  }
+  
+  .buttons {
+    position: relative;
+    padding-top: 30px;
+    margin-right: 60px;
+  }
+  .delete-btn {
+    display: inline-block;
+    cursor: pointer;
+    width: 18px;
+    height: 17px;
+  }
+  
+  .image {
+    margin-right: 50px;
+  }
+  
+  .description {
+    padding-top: 10px;
+    margin-right: 60px;
+    width: 115px;
+  }
+  .descriptionCanvas {
+    padding-top: 10px;
+    margin-right: 40px;
+    width: 115px;
+  }
+  .descriptionCanvas span {
+    display: block;
+    font-size: 14px;
+    color: #43484d;
+    font-weight: 400;
+  }
+  .description span {
+    display: block;
+    font-size: 14px;
+    color: #43484d;
+    font-weight: 400;
+  }
+  .quantity {
+    padding-top: 20px;
+    margin-right: 60px;
+  }
+  .quantityCanvas {
+    padding-top: 20px;
+  
+  }
+  /* .quantity input {
+    -webkit-appearance: none;
+    border: none;
+    text-align: center;
+    width: 32px;
+    font-size: 16px;
+    color: #43484d;
+    font-weight: 300;
+  } */
+  
+  .shopping-cart button[class*="btn"] {
+    width: 30px;
+    height: 30px;
+    background-color: #e1e8ee;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  .shopping-cartCanvas button[class*="btn"] {
+    width: 30px;
+    height: 30px;
+    background-color: #e1e8ee;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .total-price {
+    width: 83px;
+    padding-top: 27px;
+    text-align: center;
+    font-size: 16px;
+    color: #43484d;
+    font-weight: 300;
+  }
+  .total {
+    text-align: center;
+  }
+
+

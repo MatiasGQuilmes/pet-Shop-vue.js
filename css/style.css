@@ -9,12 +9,25 @@ html{
     scroll-behavior: smooth;
 }
 
+
 #nav1{
+    position: fixed;
+    background-color: #3E2093!important;
+    z-index: 1515125125;
+    width: 100%;
+   
+}
+#nav1 a:hover{
+    color:#FF836A; 
   
-    background-color: #FF836A!important;
+  } 
+a{
+    color: white !important;
+    font-size: 1.4rem!important;
 }
 
 video{
+    margin-top: 5rem!important;
     object-fit: contain;
     object-position: 0 100%;
     margin: 0;
@@ -24,18 +37,18 @@ video{
 #navs{
     margin-top: 0%;
     background-color: #FF836A;
+  
 }
 
 .video{
     position: relative;
-
 }
-
-
-
 
 .nab{
     width: 100%;
+}
+main{
+    min-height: 87vh;
 }
 
 
@@ -43,14 +56,6 @@ ul{
     letter-spacing: 2px;
 }
 
-
-
-main {   
-    min-height: 86vh;
-}
-strong{
-    color: #3E2093;
-}
 .title-desktop{
     display: none;
     color: #FF836A;
@@ -73,9 +78,12 @@ strong{
    font-size: 15vw;
     top: 55%;
     left: 2%;
-    font-weight: bolder;
+    font-weight: bold;
 }
-
+#carousel{
+    min-height: 50vh;
+    width: 100%;
+}
 #circulo img{
     
     width: 100%;
@@ -124,10 +132,15 @@ p{
     margin: 0;
     width: 100%;
     min-height: 80vh;
-    background: rgb(247,99,1);
-background: linear-gradient(90deg, #FF836A 5%, rgba(247,99,1,1) 49.8%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 64%, #FF836A 97%);
+    background: #313197;
 }
-
+/* ----- mati q t parece esto ---- */
+h2.fs-1.my-5.d-flex.flex-wrap.justify-content-center.w-100.text-light {
+    height: 4rem;
+    width:  21rem !important;
+    border-bottom: 3px solid white;
+}
+/* ------------------------------- */
 *{
   margin: 0;
   padding: 0;
@@ -159,10 +172,10 @@ background: linear-gradient(90deg, #FF836A 5%, rgba(247,99,1,1) 49.8%, rgb(255, 
     
 }
 .card img{
-    object-fit: cover;
-    height: 97%;
-    overflow: hidden;
-    border-radius: 100%;
+object-fit: cover;
+height: 97%;
+overflow: hidden;
+border-radius: 100%;
 }
 .h11{
     border-bottom: 2px solid black;
@@ -175,37 +188,38 @@ h6, h3{
     letter-spacing: 2px;
 }
 
-h2:hover{
-    
-    transform: scale(1.03);
-    transition: .7s;
-    
-    
-    
-}
-
 .card:hover{
     transform: scale(1.2);
     transition: .7s;
 }
 
+
+
 #map{
+    background: #313197;
     width: 100%;
-    height: 50vh;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    padding-top: 1rem;
+}
+.mapa{
+    width: 95%;
+    height: 90%;
+    border-radius: 2rem;
 }
 iframe{
-    width: 50vw;
+    width: 95%;
+    border-radius:2rem;
 }
  a{
     text-decoration: none;
 }
 
 footer{
-    margin-top: 4rem;
-    height: 15vh;
+    
+    height: 40vh;
     width: 100%;
-    background-color:#b3594a;
-    border-top: black 3px solid;
+    background-color: #FF836A;
 }
 
 
@@ -309,3 +323,6 @@ footer{
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+
+  
