@@ -48,7 +48,7 @@
         </div>
       </nav>
       <div class="carrito-cont">
-        <!-- CARRITOOOO -->
+      
         <button class="btn carrito-btn d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <ion-icon name="cart-outline" class="logo fs-1"></ion-icon>    
           <span class="position-absolute start-0 translate-middle badge rounded-pill bg-danger">
@@ -113,7 +113,7 @@
       </div>
         
         
-        <!--  -->
+
      </header>
     
       <main class="store">
@@ -129,18 +129,12 @@
                 </button>
                 {{filtroSearch}}   
              
-                <input v-model="textSearch"  class="input"  placeholder="Buscador" required="" type="search">
+                <input v-model="textSearch"  class="input"  placeholder="Que andas buscando?" required="" type="search">
                 <button class="reset" type="reset">
-                    <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg> -->
+                
                 </button>
              </form>
-               <!--  <form class="d-flex form-search" role="search">  
-                  {{filtroSearch}}       
-                    <input v-model="textSearch" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" > 
-                      
-                    </form>  -->
+           
 
             </div>
            
@@ -168,20 +162,7 @@
               <label class="btn btn-secondary" for="option4">Juguetes</label>
             </div>
           </div>
-<!-- 
 
-<input type="radio" class="btn-check" name="options"  v-model="checkbox" id="option2" value="Medicamento" autocomplete="off">
-                <label class="btn btn-secondary" for="option2">Farmacia</label>
-
-                <input type="radio" class="btn-check " name="options" v-model="checkbox" id="option3" value="" autocomplete="off">
-                <label class="btn btn-secondary" for="option3">Todo</label>
-
-
-                <input type="radio" class="btn-check" name="options"  v-model="checkbox" id="option4" value="Juguete" autocomplete="off">
-                <label class="btn btn-secondary" for="option4">Juegetes</label>
-
-
- -->
 
        
           <div class="products-container" >
@@ -216,15 +197,15 @@
 
 
 
-
       <footer>
 
           <div class="footer-top">
             <div class="footer-top-left">
-                <h4>Subscribete para nuevas noticias</h4>
+                <h4>¡Subscribete para nuevas noticias!</h4>
             </div>
             <div class="footer-top-right">
-                <label for=""><input type="mail">Subscribe</label>
+                <input type="mail" class="input-footer" placeholder="  tu email...">
+                <button for="" class="input-label">Subscribite!</button>
             </div>
           </div>
 
@@ -235,27 +216,40 @@
                     <h5>Sobre Nosotros</h5>
                 </div>
                 <div class="footer-about-description">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est debitis nemo, perspiciatis ea ipsa atque quasi commodi alias nobis sequi?</p>
+                    <p>Nacimos en 2020 y en Argentina, impulsados por la pasión emprendedora y un objetivo claro: mejorar la vida de las mascotas a través del desarrollo, producción, comercialización y distribución de las mejores soluciones nutricionales integrales.</p>
                 </div>
+              </div>
+
+              <div class="services">
+                  <div class="services-title">
+                      <h5>Servicios</h5>
+                  </div>
+                  <div class="services-ancors">
+                    <a href="./index.html"><span class="arrow">></span> Inicio</a>
+                    <a href="./store.html"><span>></span> Tienda</a>
+                    <a href="./contact.html"><span>></span> Contacto</a>
+                  </div>
               </div>
 
               <div class="footer-contact">
                 <div class="footer-contact-title">
                     <h5>Informacion de Contacto</h5>
                 </div>
-                <div>
-                    <a href="https://www.google.com/maps/place/R%C3%ADo+de+Janeiro+300,+C1405CCB+CABA/@-34.6117922,-58.4326038,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca429815227f:0x5d302e497c2cda87!8m2!3d-34.6117966!4d-58.4304098">Río de Janeiro 300 - CABA </a>
-                    <a href="mailto:centroPet@gmail.com">centroPet@gmail.com</a>
-                    <a href="tel:+5491132124231">+54 9 11-3212-4231</a>
+                <div class="ancors-contact">
+                    <a href="https://www.google.com/maps/place/R%C3%ADo+de+Janeiro+300,+C1405CCB+CABA/@-34.6117922,-58.4326038,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca429815227f:0x5d302e497c2cda87!8m2!3d-34.6117966!4d-58.4304098"><img src="./assets/Pin-location-point_icon-icons.com_51943.png" class="icon-ubi" alt=""> Río de Janeiro 300 - CABA </a>
+                    <a href="mailto:centroPet@gmail.com"><img class="icon-mail" src="./assets/Mail_icon-icons.com_52015.png" alt=""> centroPet@gmail.com</a>
+                    <a href="tel:+5491132124231"><img src="./assets/Phone-call_icon-icons.com_51956.png" class="tel" alt=""> +54 9 11-3212-4231</a>
                 </div>
               </div>
           </div>
 
           <div class="footer-redes-container">
               <div class="footer-redes">
-                  <a href="./assets/416-4169142_facebook-logo-facebook-white-icon-png-2018.png"></a>
-                  <a href=""></a>
-                  <a href=""></a>
+  
+
+                  <a href=""><img src="./assets/facebook_social_media_icon_187125.png "alt="" class="facebook" ></a>
+                  <a href=""><img src="./assets/INSTAGRAM_icon-icons.com_65535.png" class="ig" alt=""></a>
+                  <a href=""><img src="./assets/whatsapp_icon-icons.com_65542.png" class="wsp" alt=""></a>
               </div>
           </div>
 

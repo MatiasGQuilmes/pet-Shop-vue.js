@@ -15,6 +15,7 @@ html{
     background-color: #3E2093!important;
     z-index: 1515125125;
     width: 100%;
+    letter-spacing: 3px;
    
 }
 #nav1 a:hover{
@@ -217,7 +218,7 @@ iframe{
 
 footer{
     
-    height: 40vh;
+    min-height: 40vh;
     width: 100%;
     background-color: #FF836A;
 }
