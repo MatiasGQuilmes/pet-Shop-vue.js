@@ -9,41 +9,136 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" ></script>
     
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-    
+        
+        <link rel="stylesheet" href="./css/store.css">
         <link rel="stylesheet" href="./css/detail.css">
     
       </head>
 <body>
     <div id="app">
         <header>
-            <nav class="navbar navbar-expand-lg bg-light p-3" id="nav1">
-                <div class="container-fluid nab">
-                <a href="index.html" class="w-50">
-                <img src="https://centropet.com/wp-content/uploads/2020/08/logo2020.png" width="100rem" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        
+            <nav class="navbar navbar-expand-lg w-100 bg-light py-3" id="nav1">
+                <div class="container">
+                  <a href="#" class="w-50">
+                    <img src="https://centropet.com/wp-content/uploads/2020/08/logo2020.png"  class="img-logo" alt="">
+                  </a>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          
                     <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                    <ul class="navbar-nav text-center fw-bolder gap-5">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="/index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="/store.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="/contact.html">Contacto</a>
-                    </li>
-                    <li class="nav-item dropdown"> 
-                    </li>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+                    <ul class="navbar-nav text-center gap-5 fw-bolder">
+                      <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/store.html">Tienda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contacto</a>
+                      </li>
+                      <li class="nav-item dropdown"> 
+                      </li>
                     </ul>
+                  </div>
+                 
+              
                 </div>
+              </nav>
+              <div class="carrito-cont">
+      
+                <button class="btn carrito-btn d-flex justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                  <ion-icon name="cart-outline" class="logo fs-1"></ion-icon>
+                  <span class="contador-carrito text-light">{{totalCarrito}}</span>    
+                  <span class="position-absolute start-0 translate-middle badge rounded-pill bg-danger">
+                      
+                      <span class="visually-hidden">unread messages</span>
+                  </span>
+               </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu Carrito de Compras</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-            </nav>
+                <div class="offcanvas-body d-flex flex-column justify-content-between">
+                  <div class="d-flex caja-compras ">
+                      <div class="shopping-cartCanvas" >
+                          <h3 class="titleCanvas">
+                              Productos
+                          </h3>
+        
+                          <template v-for="item of carrito">
+                            <div class="display-inline" v-if="carrito.length > 0"> 
+                          <div class="itemCanvas d-flex justify-content-center align-items-center flex-column">
+                              
+                              <div class="image">
+                                  <img :src="item.imagen" style="width: 100%; ;max-height: 100px; " alt="" />
+                              </div>
+                              <div class="borrar-card-carrito">
+                                  
+                                <button  @click="borrarProducto(item)" class="remove"> X </button>
+                                  
+                              </div>
+                              <div class="descriptionCanvas">
+        
+                                  <span>{{item.nombre}}</span>
+                                  <hr>
+                                  <span>$ {{item.precio*item.cantidad}}</span>
+                                  
+                                    
+                                </div>  
+                                <div class="quantityCanvas d-flex flex-wrap align-items-center">
+                                  <button @click="restarCantidad(item)" class="mas-btn" type="button" name="button">
+                                      <ion-icon class="d-flex" name="remove-outline"></ion-icon>
+                                  </button>
+                                  <span>{{item.cantidad}}</span>
+        
+                                  <button @click="sumarCantidad(item)" class="menos-btn" type="button" name="button">
+                                      <ion-icon class="d-flex" name="add-outline"></ion-icon>
+                                  </button>
+        
+        
+                              </div>
+        
+                               <span>{{item.alertaStock}}</span>                          
+                          </div>
+                        </div>
+                          
+                        </template>
+        
+                          <hr>
+                      </div>                   
+                  </div>
+        
+                  <div class="display-inline" v-if="carrito.length == 0 ">
+                  <h5> No hay productos en tu carrito.</h5>
+                </div>
+        
+                  <div class="total-price">
+                      <h5>Subtotal: $ {{subTotal}}</h5>
+                      <h5>IVA (21%): $ {{subTotal*0.21}}</h5>
+                      <h4>Total: $ {{total}}
+                      </h4>
+                  </div>
+                  <div class="d-flex align-items-center carrito-content">
+                      <a href="./carrito.html" class="text-white text-decoration-none w-100" >
+                          <button type="button" class="col-8 btn btn-success finalizar-comp ">
+                              Finalizar Compra
+                          </button>
+                      </a> 
+                      
+                          <button @click="vaciarCarrito()" type="button" class="btn btn-danger vacia-carrito">
+                              Vaciar carrito
+                          </button>
+                      
+                  </div>
+              </div>
+              
               
         </header>
         <main class="main-detail">
@@ -63,17 +158,18 @@
                         <p>{{detailProduct.descripcion}}</p>
                     </div>
                     <div class="cart">
+                       <!--  
                         <div class="mas-menos">
-                            <button class="menos">
+                            <button @click="restarCantidad" class="menos">
                                 -
                             </button>
-                            1
-                            <button class="mas">
+                                <input v-model="cantidad" type="number" min="0" :max="detailProduct.stock" name="" id="">
+                            <button @click="sumarCantidad(detailProduct)" class="mas">
                                 +
                             </button>
-                        </div>
+                        </div> -->
                         <div class="addToCart-div">
-                            <a class="addToCart" href="">Agregar al carrito</a>
+                            <a class="addToCart" @click="agregarAlCarrito(detailProduct)" href="#">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -83,11 +179,73 @@
         </main>
         <footer>
 
+            <div class="footer-top">
+              <div class="footer-top-left">
+                  <h4>¡Subscribete para nuevas noticias!</h4>
+              </div>
+              <div class="footer-top-right">
+                  <input type="mail" class="input-footer" placeholder="  tu email..." id="subs">
+                  <button for="subs" class="input-label">Subscribite!</button>
+              </div>
+            </div>
+  
+  
+            <div class="footer-medium">
+                <div class="footer-about">
+                  <div class="footer-about-title">
+                      <h5>Sobre Nosotros</h5>
+                  </div>
+                  <div class="footer-about-description">
+                      <p>Nacimos en 2020 y en Argentina, impulsados por la pasión emprendedora y un objetivo claro: mejorar la vida de las mascotas a través del desarrollo, producción, comercialización y distribución de las mejores soluciones nutricionales integrales.</p>
+                  </div>
+                </div>
+  
+                <div class="services">
+                    <div class="services-title">
+                        <h5>Servicios</h5>
+                    </div>
+                    <div class="services-ancors">
+                      <a href="./index.html"><span class="arrow">></span> Inicio</a>
+                      <a href="./store.html"><span>></span> Tienda</a>
+                      <a href="./contact.html"><span>></span> Contacto</a>
+                    </div>
+                </div>
+  
+                <div class="footer-contact">
+                  <div class="footer-contact-title">
+                      <h5>Informacion de Contacto</h5>
+                  </div>
+                  <div class="ancors-contact">
+                      <a href="https://www.google.com/maps/place/R%C3%ADo+de+Janeiro+300,+C1405CCB+CABA/@-34.6117922,-58.4326038,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcca429815227f:0x5d302e497c2cda87!8m2!3d-34.6117966!4d-58.4304098"><img src="./assets/Pin-location-point_icon-icons.com_51943.png" class="icon-ubi" alt=""> Río de Janeiro 300 - CABA </a>
+                      <a href="mailto:centroPet@gmail.com"><img class="icon-mail" src="./assets/Mail_icon-icons.com_52015.png" alt=""> centroPet@gmail.com</a>
+                      <a href="tel:+5491132124231"><img src="./assets/Phone-call_icon-icons.com_51956.png" class="tel" alt=""> +54 9 11-3212-4231</a>
+                  </div>
+                </div>
+            </div>
+  
+            <div class="footer-redes-container">
+                <div class="footer-redes">
+    
+  
+                    <a href=""><img src="./assets/facebook_social_media_icon_187125.png "alt="" class="facebook" ></a>
+                    <a href=""><img src="./assets/INSTAGRAM_icon-icons.com_65535.png" class="ig" alt=""></a>
+                    <a href=""><img src="./assets/whatsapp_icon-icons.com_65542.png" class="wsp" alt=""></a>
+                </div>
+            </div>
+  
+  
+            <div class="copyright">
+                <p>Copyright 2022. Todos los derechos reservados</p>
+            </div>
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+ 
     <script src="./javascript/vue.js"></script>
 </body>
 </html>

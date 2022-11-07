@@ -11,81 +11,98 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/af39f1a2c3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="./css/carrito.css">
+	  <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+   <link rel="stylesheet" href="./css/carrito.css">
+
+
 </head>
-<body>
+<body id="app">
     <header>
         </header>
+    <nav class="navbar navbar-expand-lg bg-light p-3 position-sticky" id="nav1">
+      <div class="container-fluid nab">
+        <div class="w-50">
+          <a href="#"><img src="https://centropet.com/wp-content/uploads/2020/08/logo2020.png" width="100"
+              alt=""></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+          <ul class="navbar-nav text-center fw-bolder gap-5">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/store.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="/contact.html">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
         <!-- <div class="d-flex justify-content-md-end">
             <a href="https://wa.me/+541166254715" class="btn-wsp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
             </a>
         </div> -->
-        <main>
-        
-            <div class="d-flex justify-content-evenly">
-                <div class="shopping-cart" >
-                    <h3 class="title">
-                        Carrito de compras
-                    </h3>
-                    <div class="item">
-                        <!-- <div class="buttons ">
-                            <button class="delete-btn" type="button" name="button">
-                                <ion-icon class="d-flex" name="close-outline"></ion-icon>
-                            </button>
-                        </div> -->
-                        <div class="image">
-                            <img :src="producto.imagen" style="max-width: 100px ;max-height: 100px; " alt="" />
-                        </div>
-                        <div class="description">
-                            <span></span>
-                            
-                        </div>
-                        <div class="quantity">
-                            <button class="mas-btn" type="button" name="button">
-                                <ion-icon class="d-flex" name="remove-outline"></ion-icon>
-                            </button>
-                            
-                            <button class="menos-btn" type="button" name="button">
-                                <ion-icon class="d-flex" name="add-outline"></ion-icon>
-                            </button>
-                        </div>
-                        <div class="total-price"></div>
-                    </div>    
-                </div>
-                
-                <div class="compraFinal" >
-                    <div>
-                        <div class="title">
-                            <h3>Su compra:</h3>
-                        </div>
-                        <div>
-                            <span class="m-2 "><h5 class="ms-2">Sub Total:</h5></span>
-                            <span class="m-2 m-2"><h6 class="ms-2" >IVA: </h6>
-                            <span class="m-2 m-2"><h4 class="ms-2" >Total:</h4></span>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-success">
-                                PAGAR
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex justify-content-center pb-5 gap-3">
-                <a href="#" class="text-white text-decoration-none " >
-                    <button type="button" class="btn btn-success ">
-                        Ir arriba
-                    </button>
-                </a>
-                <a href="#" class="text-white text-decoration-none " >
-                    <button type="button" class="btn btn-danger ">
-                        Borrar carrito
-                    </button>
-                </a>
-            </div>
-            
+        <main class="  container bg-light">
+		<div class="row compra ">
+			
+        		<div class="col row    " style="background-color: #3E2093;" >
+				
+				<h2 class="justify-content-center p-4 text-white d-flex border-bottom border-dark" >Carrito </h2>
+				
+
+				<div class="m-3 items p-2" v-for="item in carrito" style="width: 15rem;">
+				  <img class="card-img-top" :src="item.imagen"alt="Card image cap">
+				  <div class="card-body">
+					  <h4 class="card-title">{{item.nombre}}</h4><br></br>
+                       			  <span>{{item.alertaStock}}</span>                          
+					  <p>Cantidad: {{item.cantidad}}</p>
+                          		  <span>$ {{item.precio*item.cantidad}}</span>
+					  <div class=" d-flx justify-content-center">
+						  <a href="#" class="btn d-flex justify-content-center bg-danger ">Borrar compra</a>
+						<div class="d-flex  justify-content-around m-2">
+							
+						<i class="bi bi-plus-circle-fill text-success"@click="sumarCantidad(item) " type="button"></i>	  
+							<i class="bi bi-dash-circle-fill text-danger "@click="restarCantidad(item)" type="button"></i>
+
+						</div>
+
+					</div>
+				  </div>
+				</div>
+
+			</div>
+			<div class="col d-flex justify-content-center m-1">
+				<div  class="ps-5">
+						
+					
+						<div class="sticky-top">
+						<h2 class="h1 justify-content-center p-4  d-flex border-bottom border-dark ">Su compra</h2>
+							<div class="items p-5">
+								
+              							<h2 class="display-1">Subtotal: $ {{subTotal}}</h2>
+              							<h5>IVA (21%): $ {{subTotal*0.21}}</h5>
+              							<h4>Total: $ {{total}}</h4><br></br>
+								<div class=" d-flx justify-content-center">
+								  <a href="#" class="btn d-flex justify-content-center bg-success">Comprar</a>
+								<div class="d-flex  justify-content-around m-2">
+						
+							</div>
+						</div>
+				</div>
+
+			</div>
+		</div>
         </main>
     
    
@@ -94,6 +111,7 @@
         
 </div>
 <!-- JavaScript Bundle with Popper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./javascript/vue.js"></script>
